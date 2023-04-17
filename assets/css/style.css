@@ -71,4 +71,14 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.l-header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l-container {
+  max-width: 1200px;
+  margin-inline: auto;
 }/*# sourceMappingURL=style.css.map */

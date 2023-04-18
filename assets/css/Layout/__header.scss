@@ -1,6 +1,16 @@
 @use "../Global/__mixin" as mix;
+
 .l-header {
     &__inner {
         @include mix.flex;
+        height: 100px
+    }
+
+    &__lists {
+        @include mix.flex;
+    }
+
+    &__item {
+        padding: 0 20px;
     }
 }

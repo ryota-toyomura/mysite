@@ -12,7 +12,7 @@
     <header class="l-header l-container">
         <div class="l-header__inner">
             <h1 class="l-header__logo">
-                Test
+                Tests
             </h1>
             <nav class="l-header__nav">
                 <ul class="l-header__lists">

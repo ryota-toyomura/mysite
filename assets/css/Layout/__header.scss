@@ -1,6 +1,6 @@
 @use "../Global/__mixin" as mix;
 .l-header {
-    &__main {
+    &__inner {
         @include mix.flex;
     }
 }

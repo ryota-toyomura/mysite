@@ -5,6 +5,17 @@
   box-sizing: border-box;
 }
 
+/* list style */
+li {
+  list-style: none;
+}
+
+/* link style */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 /* Remove default margin */
 body,
 h1,
@@ -72,7 +83,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.l-header__main {
+.l-header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;

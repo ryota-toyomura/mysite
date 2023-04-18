@@ -10,9 +10,9 @@
 
 <body>
     <header class="l-header l-container">
-        <div class="l-header__main">
+        <div class="l-header__inner">
             <h1 class="l-header__logo">
-                Toyomii
+                Test
             </h1>
             <nav class="l-header__nav">
                 <ul class="l-header__lists">

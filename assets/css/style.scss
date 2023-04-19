@@ -1,15 +1,15 @@
-@use "Foundation/__reset";
-@use "Foundation/__base";
+@use "Foundation/reset";
+@use "Foundation/base";
 
 
-@use "Layout/__header";
-@use "Layout/__footer";
-@use "Layout/__container";
+@use "Layout/header";
+@use "Layout/footer";
+@use "Layout/container";
 
 
-@use "Object/Project/__about";
-@use "Object/Project/__articles";
-@use "Object/Project/__blog";
-@use "Object/Project/__contact";
-@use "Object/Project/__top";
-@use "Object/Project/__works";
+@use "Object/Project/about";
+@use "Object/Project/articles";
+@use "Object/Project/blog";
+@use "Object/Project/contact";
+@use "Object/Project/top";
+@use "Object/Project/works";

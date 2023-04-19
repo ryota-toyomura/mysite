@@ -463,6 +463,10 @@ template {
   display: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .l-header__inner {
   display: flex;
   justify-content: space-between;
@@ -488,4 +492,5 @@ template {
 #mainVisual {
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 100px;
 }/*# sourceMappingURL=style.css.map */

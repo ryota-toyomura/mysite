@@ -1,9 +1,14 @@
-@use "../Global/__mixin" as mix;
+@use "../Global/_mixin" as mix;
 
 .l-header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+
     &__inner {
         @include mix.flex;
-        height: 100px
+        height: 80px
     }
 
     &__lists {
@@ -12,5 +17,9 @@
 
     &__item {
         padding: 0 20px;
+    }
+
+    &__link {
+        font-size: 1.15rem;
     }
 }

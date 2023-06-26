@@ -1,5 +1,139 @@
-#mainVisual {
+@use "../../Global/mixin" as mix;
+
+#p-mainVisual {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 100px;
+}
+
+.p-topSection {
+    padding: 150px 15px;
+
+    &__heading {
+        font-size: 2rem;
+        padding-left: 60px;
+        margin-bottom: 30px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__heading::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 18px;
+    }
+
+    &__heading::after {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        right: -55px;
+        top: 18px;
+    }
+
+    &__txt {
+        line-height: 30px;
+    }
+}
+
+.p-topAbout {
+    @include mix.flex;
+
+    &__txts {
+        position: relative;
+    }
+
+    &__link {
+        display: block;
+        text-align: right;
+        margin-top: 20px;
+        font-size: 0.85rem;
+
+        span {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #eee;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.p-topPhoto {
+    &__imgs {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        a {
+            display: block;
+            width: 32%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__txts {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__txt {
+        line-height: 30px;
+        font-size: 0.85rem;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 8px 12px;
+        background-color: #eee;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+    }
+}
+
+.p-topBlog {
+    &__link {
+        text-align: right;
+        display: block;
+        margin-top: 30px;
+
+        span {
+            font-size: 0.85rem;
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #eee;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.p-topBlogs {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    figure {
+        width: 32%;
+
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+    }
+
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v2.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -463,15 +464,26 @@ template {
   display: none;
 }
 
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #292929;
+}
+
 img {
   max-width: 100%;
 }
 
+.l-header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+}
 .l-header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 80px;
 }
 .l-header__lists {
   display: flex;
@@ -481,6 +493,22 @@ img {
 .l-header__item {
   padding: 0 20px;
 }
+.l-header__link {
+  font-size: 1.15rem;
+}
+
+main {
+  padding: 100px 0;
+}
+
+.l-footer {
+  padding: 40px 0;
+  border-top: 1px solid #000;
+}
+.l-footer__copy {
+  text-align: center;
+  font-size: 0.9rem;
+}
 
 .l-container {
   max-width: 1230px;
@@ -489,8 +517,334 @@ img {
   margin-inline: auto;
 }
 
-#mainVisual {
+.l-common-container {
+  max-width: 1030px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-inline: auto;
+}
+
+.wp-pagenavi {
+  /* 全体 */
+  margin: 20px 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.wp-pagenavi a {
+  /* フォント色 */
+  color: #4a4a4a;
+}
+
+.pages {
+  /* 左の表記 */
+  display: none;
+}
+
+.wp-pagenavi .current,
+.wp-pagenavi a.page {
+  /* ボタン */
+  margin: 0 6px 6px 0;
+  display: inline-block;
+  border: solid 1px #eee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.wp-pagenavi .current {
+  /* カレント数字 */
+  border: none;
+  background: #000;
+  color: #fff;
+}
+
+.wp-pagenavi .first,
+.wp-pagenavi .extend {
+  /* ... */
+  margin-right: 10px;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+  /* 記号の削除 */
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .wp-pagenavi a.page:hover {
+    background: #000;
+    color: #fff;
+    transition: 0.5s;
+  }
+}
+.p-about-common {
+  margin-top: 150px;
+}
+.p-about-common__heading {
+  font-size: 2.3rem;
+  padding-left: 60px;
+  margin-bottom: 70px;
+  display: inline-block;
+  position: relative;
+}
+.p-about-common__heading::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 22px;
+}
+.p-about-common__heading::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  right: -55px;
+  top: 22px;
+}
+
+.p-about__blocks {
+  display: flex;
+  justify-content: space-between;
+}
+.p-about__txts {
+  width: 60%;
+}
+.p-about__name {
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+}
+.p-about__lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.p-about__item {
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  width: 50%;
+}
+
+.p-about-intro__txtL {
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  line-height: 35px;
+  font-size: 1.35rem;
+}
+.p-about-intro__txtS {
+  margin-bottom: 25px;
+  line-height: 30px;
+  font-size: 0.95rem;
+}
+
+.p-about-history__lists {
+  margin-top: 30px;
+}
+.p-about-history__item {
+  list-style-type: disc;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.p-about-skills__lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  margin-bottom: 150px;
+}
+.p-about-skills__item {
+  width: 33%;
+  text-align: center;
+  margin-bottom: 130px;
+}
+.p-about-skills__item h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+.p-about-skills__item p {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+
+#p-mainVisual {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 100px;
+}
+
+.p-topSection {
+  padding: 150px 15px;
+}
+.p-topSection__heading {
+  font-size: 2rem;
+  padding-left: 60px;
+  margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
+}
+.p-topSection__heading::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 18px;
+}
+.p-topSection__heading::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  right: -55px;
+  top: 18px;
+}
+.p-topSection__txt {
+  line-height: 30px;
+}
+
+.p-topAbout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-topAbout__txts {
+  position: relative;
+}
+.p-topAbout__link {
+  display: block;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+.p-topAbout__link span {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #eee;
+  letter-spacing: 1px;
+}
+
+.p-topPhoto__imgs {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.p-topPhoto__imgs a {
+  display: block;
+  width: 32%;
+}
+.p-topPhoto__imgs a img {
+  width: 100%;
+}
+.p-topPhoto__txts {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-topPhoto__txt {
+  line-height: 30px;
+  font-size: 0.85rem;
+}
+.p-topPhoto__link {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #eee;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.p-topBlog__link {
+  text-align: right;
+  display: block;
+  margin-top: 30px;
+}
+.p-topBlog__link span {
+  font-size: 0.85rem;
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #eee;
+  letter-spacing: 1px;
+}
+
+.p-topBlogs {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.p-topBlogs figure {
+  width: 32%;
+}
+.p-topBlogs figure img {
+  width: 100%;
+}
+.p-topBlogs figure figcaption {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+hgroup {
+  padding: 50px;
+  margin-bottom: 150px;
+  border: 4px solid #333333;
+}
+
+.c-archives {
+  margin-top: 100px;
+}
+.c-archives__heading {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.c-archives__sub {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.c-archives__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.c-archives__contents {
+  margin-bottom: 70px;
+  width: 30%;
+}
+.c-archives__excerpt {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.c-archives-contents {
+  width: 82%;
+  margin: 0 auto;
+}
+.c-archives-contents .wp-block-heading {
+  font-size: 1.7rem;
+  margin-bottom: 50px;
+}
+.c-archives-contents p {
+  margin: 23px 0;
+  line-height: 30px;
+  font-size: 0.9rem;
+}
+.c-archives-contents .wp-block-image {
+  margin: 23px 0;
+}
+
+.c-single-heading {
+  margin-top: 100px;
 }/*# sourceMappingURL=style.css.map */

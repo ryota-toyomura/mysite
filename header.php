@@ -12,31 +12,21 @@
     <header class="l-header l-container">
         <div class="l-header__inner">
             <h1 class="l-header__logo">
-                Test
+                <a href="<?php echo esc_url(home_url()); ?>">Test
             </h1>
+
             <nav class="l-header__nav">
-                <ul class="l-header__lists">
-                    <li class="l-header__item">
-                        <a href="" class="l-header__link">
-                            About
-                        </a>
-                    </li>
-                    <li class="l-header__item">
-                        <a href="" class="l-header__link">
-                            Blog
-                        </a>
-                    </li>
-                    <li class="l-header__item">
-                        <a href="" class="l-header__link">
-                            Works
-                        </a>
-                    </li>
-                    <li class="l-header__item">
-                        <a href="" class="l-header__link">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'main-menu',
+                        'menu_class' => 'l-header__lists',
+                        'add_li_class' => 'l-header__item',
+                        'add_a_class' => 'l-header__link',
+                        'container' => false,
+                    )
+                );
+                ?>
             </nav>
         </div>
 

@@ -1,0 +1,57 @@
+hgroup{
+    padding: 50px;
+    margin-bottom: 150px;
+    border: 4px solid #333333;
+}
+
+.c-archives {
+    margin-top: 100px;
+
+    &__heading {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    &__sub{
+        margin-top: 15px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__contents {
+        margin-bottom: 70px;
+        width: 30%;
+    }
+
+    &__excerpt {
+        margin-top: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+.c-archives-contents {
+    width: 82%;
+    margin: 0 auto;
+
+
+    .wp-block-heading {
+        font-size: 1.7rem;
+        margin-bottom: 50px;
+    }
+
+    p {
+        margin: 23px 0;
+        line-height: 30px;
+        font-size: 0.9rem;
+    }
+    .wp-block-image{
+        margin: 23px 0;
+    }
+}

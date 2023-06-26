@@ -1,0 +1,116 @@
+.p-about-common {
+    margin-top: 150px;
+
+    &__heading {
+        font-size: 2.3rem;
+        padding-left: 60px;
+        margin-bottom: 70px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__heading::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 22px;
+    }
+
+    &__heading::after {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        right: -55px;
+        top: 22px;
+    }
+}
+
+
+.p-about {
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__txts {
+        width: 60%;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        margin-bottom: 60px;
+    }
+
+    &__lists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        margin-bottom: 25px;
+        font-size: 0.9rem;
+        width: 50%;
+    }
+
+}
+
+.p-about-intro {
+    &__txtL {
+        font-weight: bold;
+        margin-bottom: 50px;
+        margin-top: 25px;
+        line-height: 35px;
+        font-size: 1.35rem;
+    }
+
+    &__txtS {
+        margin-bottom: 25px;
+        line-height: 30px;
+        font-size: 0.95rem;
+    }
+}
+
+.p-about-history {
+    &__lists {
+        margin-top: 30px;
+    }
+
+    &__item {
+        list-style-type: disc;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+    }
+}
+
+.p-about-skills {
+    &__lists {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 80px;
+        margin-bottom: 150px;
+    }
+
+    &__item {
+        width: 33%;
+        text-align: center;
+        margin-bottom: 130px;
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            line-height: 25px;
+        }
+    }
+}

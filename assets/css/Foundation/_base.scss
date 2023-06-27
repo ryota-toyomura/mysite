@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Noto Sans JP', sans-serif;
     color: #292929;
 
@@ -6,4 +6,29 @@ body{
 
 img {
     max-width: 100%;
+    height: auto;
+}
+
+@media(min-width:851px) {
+    .tab-appea {
+        display: none !important;
+    }
+}
+
+@media(max-width:850px) {
+    .tab-none {
+        display: none !important;
+    }
+}
+
+@media(min-width:481px) {
+    .sp-appea {
+        display: none !important;
+    }
+}
+
+@media(max-width:480px) {
+    .sp-none {
+        display: none !important;
+    }
 }

@@ -4,16 +4,23 @@
         <h2 class="p-photo__heading c-archives__heading">Photo</h2>
         <p class="c-archives__sub">ご飯や風景や友達などを撮ります。</p>
     </hgroup>
-    <div class="p-photo c-archives-contents">
+    <article class="p-photo c-single-contents">
         <?php
         if (have_posts()) : ?>
-            <?php while (have_posts()) :
+        <?php while (have_posts()) :
                 the_post();
             ?>
-
-                <?php the_content(); ?>
-            <?php endwhile; ?>
+        <div class="c-single-title">
+            <h2>
+                <?php the_title(); ?>
+            </h2>
+            <time class="c-single-title__time">
+                <?php echo get_the_date(); ?>
+            </time>
+        </div>
+        <?php the_content(); ?>
+        <?php endwhile; ?>
         <?php endif; ?>
-    </div>
+    </article>
 </main>
 <?php get_footer(); ?>

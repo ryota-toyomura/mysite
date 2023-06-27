@@ -1,7 +1,18 @@
 @use "../Global/_mixin" as mix;
 
+#mask {
+    display: none;
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+header {
+    padding: 20px 0;
+}
+
 .l-header {
     position: fixed;
+    z-index: 10;
     right: 0;
     left: 0;
     background-color: #fff;
@@ -21,5 +32,160 @@
 
     &__link {
         font-size: 1.15rem;
+    }
+}
+
+.l-toggle-btn {
+    display: block;
+    position: fixed;
+    top: 75px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 20;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #333;
+        transition: all 0.5s;
+        border-radius: 4px;
+    }
+
+    span:nth-child(1) {
+        top: 4px;
+    }
+
+    span:nth-child(2) {
+        top: 14px;
+    }
+
+    span:nth-child(3) {
+        bottom: 4px;
+    }
+}
+
+.open {
+    nav {
+        left: 0;
+        opacity: 1;
+    }
+
+    .l-toggle-btn span {
+        background-color: #fff;
+    }
+
+    .l-toggle-btn span:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    .l-toggle-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .l-toggle-btn span:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    #mask {
+        display: block;
+        position: fixed;
+        background-color: #000;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+}
+
+@media(min-width:851px) {
+    .l-toggle-btn {
+        display: none;
+    }
+}
+
+@media(max-width:850px) {
+    .l-header {
+        &__nav {
+            padding-top: 35px;
+            position: absolute;
+            z-index: 20;
+            width: 400px;
+            opacity: 0;
+            left: -425px;
+            display: block;
+            transition: 0.5s;
+            background-color: #fff;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        &__lists {
+            flex-direction: column;
+            width: 80%;
+            margin-inline: auto;
+            padding-top: 35px;
+        }
+
+        &__item {
+            border-bottom: 1px solid #000;
+            width: 90%;
+            margin-inline: auto;
+        }
+
+        &__link {
+            padding: 1.5rem 0;
+            transition: 0.2s;
+            display: block;
+            font-size: 0.85rem;
+        }
+    }
+
+    .open {
+        .l-header__nav {
+            opacity: 1;
+            transition: 0.5s;
+            left: 0;
+            height: 100vh;
+            margin-top: 0;
+            padding-top: 35px;
+        }
+
+        .l-toggle-btn {
+            span {
+                background-color: #fff;
+            }
+        }
+
+        .p-topAbout__txts,
+        .p-topSection__heading {
+            z-index: -1;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .l-header {
+        &__nav {
+            width: 80%;
+        }
+        &__inner{
+            align-items: flex-start;
+        }
+        &__logo{
+            a{
+                img{
+                    width: 200px;
+                }
+            }
+        }
     }
 }

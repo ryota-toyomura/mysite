@@ -114,3 +114,101 @@
         }
     }
 }
+
+@media(max-width:1050px) {
+    main {
+        width: 95%;
+    }
+}
+
+@media(max-width:850px) {
+    .p-about {
+        &__lists {
+            flex-direction: column;
+        }
+
+        &__item {
+            width: 100%;
+        }
+    }
+
+    .p-about-skills {
+        &__item {
+            width: 45%;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .p-about {
+        &__blocks {
+            flex-direction: column;
+        }
+
+        &__txts {
+            width: 100%;
+        }
+
+        &__img {
+            margin-top: 40px;
+        }
+
+        &__item {
+            font-size: 0.85rem;
+        }
+
+    }
+
+    .p-about-common {
+        margin-top: 100px;
+        text-align: center;
+
+        &__heading {
+            padding-left: 0;
+            font-size: 2rem;
+        }
+
+        &__heading::before {
+            left: -63px;
+        }
+    }
+
+    .p-about-intro {
+        &__txtL {
+            font-size: 1rem;
+        }
+
+        &__txtS {
+            font-size: 0.85rem;
+            text-align: left;
+        }
+    }
+
+    .p-about-history {
+        &__item {
+            text-align: left;
+            font-size: 0.85rem;
+        }
+
+        &__lists {
+            width: 90%;
+            margin-inline: auto;
+        }
+
+        &__item {
+            line-height: 25px;
+        }
+    }
+
+    .p-about-skills {
+        &__lists {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        &__item {
+            width: 100%;
+            margin-bottom: 70px;
+        }
+    }
+}

@@ -84,8 +84,14 @@
             </div>
             <div class="p-about-skills__item">
                 <h2 class="p-about-skills__heading">PHP</h2>
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/php.svg" alt="" width="150px"
-                    height="150px">
+                <picture>
+                    <source srcset="<?php echo get_template_directory_uri() ?>/assets/images/php_pc.svg" alt=""
+                        width="150px" height="150px" media="(min-width: 481px)">
+                    <source srcset="<?php echo get_template_directory_uri() ?>/assets/images/php.png" alt=""
+                        width="150px" height="150px" media="(max-width: 480px)">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/php_pc.svg" alt="" width="150px"
+                        height="150px">
+                </picture>
                 <p>0ベースで書くことはできませんが、<br>解読・流用はできます。</p>
             </div>
             <div class="p-about-skills__item">

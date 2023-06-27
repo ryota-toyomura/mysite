@@ -1,0 +1,156 @@
+form {
+    width: 82%;
+    margin-inline: auto;
+}
+
+input,
+textarea {
+    background-color: #f3f3f3;
+    border-radius: 3px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+}
+
+input {
+    padding: 20px;
+    width: 100%;
+}
+
+
+.p-contact {
+    &__txt {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__contents {
+        margin-bottom: 30px;
+    }
+
+    &__required {
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 15px;
+        font-size: 0.95rem;
+    }
+
+    &__required::before {
+        content: '*';
+        color: red;
+        position: absolute;
+        left: 0;
+    }
+
+    &__check {
+        text-align: center;
+        margin: 30px 0 55px;
+        font-size: 0.9rem;
+    }
+
+    &__btn {
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    &__thxTxt {
+        text-align: center;
+        line-height: 30px;
+    }
+
+    &__thxBack {
+        text-align: center;
+
+        a {
+            width: 230px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid;
+            margin-top: 50px;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 3px;
+        }
+    }
+
+}
+
+.send {
+    width: 230px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid;
+}
+
+.back {
+    width: 230px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid;
+    margin-right: 17px;
+}
+
+.mw_wp_form {
+    .error {
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+}
+
+.mw_wp_form_confirm {
+    .p-contact {
+        &__contents {
+            display: flex;
+            justify-content: space-between;
+            margin-inline: auto;
+            border-bottom: 1px solid;
+
+            dd {
+                width: 60%;
+                margin-bottom: 30px;
+                line-height: 30px;
+            }
+        }
+
+        &__required {
+            padding-left: 30px;
+            width: 40%;
+        }
+
+        &__required::before {
+            content: '';
+        }
+
+        &__btn {
+            text-align: center;
+            margin-top: 85px;
+        }
+    }
+
+}
+
+@media(max-width:480px) {
+    form {
+        width: 100%;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    .p-contact {
+        &__txt {
+            font-size: 0.88rem;
+            line-height: 30px;
+            margin-bottom: 70px;
+        }
+
+        &__required {
+            font-size: 0.88rem;
+        }
+    }
+}

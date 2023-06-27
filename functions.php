@@ -56,14 +56,14 @@ function enqueue_scripts() //js,cssの読み込み
         'theme-js', //第一引数 ハンドル名の指定
         get_template_directory_uri() . '/assets/js/function.js', //パスを指定
         array(), //指定ファイルより前に読み込むファイルがあればそのハンドル名を指定する。今回は無いので初期値のarray()
-        '1.0.0', //バージョン
+        '20', //バージョン
         true //出力場所をwp_footer()にするならtrue 指定が無ければfalseとなる
     );
     wp_enqueue_style( //cssを定義する関数引数にそれぞれを指定する 引数は上記jsと同一
         'common-style',
         get_template_directory_uri() . '/assets/css/style.css',
         array(),
-        '131'
+        '224'
     );
     wp_enqueue_style( //cssを定義する関数引数にそれぞれを指定する 引数は上記jsと同一
         'google-gont',
